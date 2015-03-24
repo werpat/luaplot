@@ -53,14 +53,14 @@ function axis.create(graph, args)
 
 	self.autoMin = false
 	if type(self.min) ~= "number" then
-		self.min = 1e37
+		self.min = math.huge
 		self.autoMin = true
 	end
 
 	self.autoMax = false
 	if type(self.max) ~= "number" then
 		print("max not given")
-		self.max = -1e37
+		self.max = -math.huge
 		self.autoMax = true
 	end
 	self.scale = scale.create(self.min, self.max)
